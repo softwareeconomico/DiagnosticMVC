@@ -1,4 +1,4 @@
-# Layered Architecture with MVC, Repositories, and Dependency Injection
+# Architecture with MVC, Repositories, and Dependency Injection Template
 
 A template for organizing software projects using **MVC** (Model-View-Controller) pattern along with **Repositories** and **Dependency Injection**. This structure helps in organizing code into clear layers, improving maintainability, scalability, and testability.
 
@@ -9,7 +9,6 @@ A template for organizing software projects using **MVC** (Model-View-Controller
 - [Introduction](#introduction)
 - [Principles of MVC with Dependency Injection](#principles-of-mvc-with-dependency-injection)
 - [Project Structure](#project-structure)
-- [Layer Descriptions](#layer-descriptions)
 - [Getting Started](#getting-started)
 - [Why Use This Architecture?](#why-use-this-architecture)
 
@@ -64,51 +63,6 @@ This structure provides a clean architecture for managing complex applications a
   app.py                   # Application entry point
   di_container.py          # Dependency Injection Container to manage dependencies
 ```
-
----
-
-## **Layer Descriptions**
-
-### **Presentation Layer**:
-
-This layer interacts with the user, displaying information and receiving input.
-
-- **/views**: UI components (web pages, forms, graphical interfaces).
-- **/controllers**: Handles user input, manages events, and coordinates actions between the UI and business logic.
-- **/models**: Represents the data the UI works with (View Models), structured to suit the UI.
-
-### **Business Logic Layer**:
-
-This layer contains the application’s core functionality and business rules.
-
-- **/services**: Contains the core business logic and application workflows.
-- **/models**: Domain objects that represent real-world entities in the application (e.g., "Product," "Order").
-- **/use_cases**: Defines business processes and tasks, outlining the steps for specific actions in the application.
-
-### **Data Access Layer (Repositories)**:
-
-This layer handles the interaction with data storage, such as databases or external APIs.
-
-- **/repositories**: Contains data access logic, including retrieval and persistence operations.
-- **/entities**: Data models representing database tables or external data structures.
-- **/migrations**: Scripts for managing database schema changes.
-
-### **Infrastructure Layer**:
-
-The infrastructure layer deals with external systems and services, such as email, APIs, or third-party services.
-
-- **/services**: External integrations like APIs, email services, or payment processors.
-- **/frameworks**: Framework-specific configurations or tools.
-- **/config**: Configuration files for the system (e.g., database connections, API keys, DI setup).
-
-### **Testing Layer**:
-
-Contains tests for different layers of the application to ensure that each part behaves as expected.
-
-- **/integration**: Tests that check how different layers work together.
-- **/presentation**, **/business**, **/data**: Unit tests specific to each layer, ensuring the functionality of the application.
-
----
 
 ## **Getting Started**
 
